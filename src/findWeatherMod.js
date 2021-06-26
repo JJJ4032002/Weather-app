@@ -3,7 +3,7 @@ import { fillHtml } from "./fillHtmlMod";
 const findWeather = async function (city = "New York") {
   try {
     const response = await fetch(
-      `http://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=6e751fc6e3699df7c2b3660247b0424c`
+      `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&APPID=6e751fc6e3699df7c2b3660247b0424c`
     );
     const WeatherDetails = await response.json();
     if (WeatherDetails["cod"] === "404") {
